@@ -1,0 +1,48 @@
+@model IEnumerable<todowebapp.data.Models.ToDoItem>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+     <a asp-action="Add" >Add New</a> 
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCompleted)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsCompleted)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Update Status</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

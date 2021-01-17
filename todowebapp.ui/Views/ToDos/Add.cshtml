@@ -1,0 +1,12 @@
+@model todowebapp.data.Models.ToDoItem
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Add</h2>
+<form asp-controller="ToDos" asp-action="AddItem" method="post">
+    <textarea asp-for="Description"></textarea>
+    <button type="submit">Add</button>
+</form>
