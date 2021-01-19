@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "todowebapp.ui"
+		},
+		{
+			"path": "todowebapp.data"
+		}
+	],
+	"settings": {}
+}
